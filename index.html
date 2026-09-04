@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graffiti & Art Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <header class="header">
+      <h1>Graffiti <span>Studio</span></h1>
+      <p>Pinte no muro virtual com spray e pincel</p>
+    </header>
+
+    <main class="workspace">
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="tool-group">
+          <label>Modo:</label>
+          <button id="btnSpray" class="btn-tool active">Spray 🎨</button>
+          <button id="btnBrush" class="btn-tool">Pincel 🖌️</button>
+        </div>
+
+        <div class="tool-group">
+          <label for="colorPicker">Cor:</label>
+          <input type="color" id="colorPicker" value="#00f0ff">
+        </div>
+
+        <div class="tool-group">
+          <label for="sizeRange">Tamanho: <span id="sizeVal">30</span>px</label>
+          <input type="range" id="sizeRange" min="5" max="80" value="30">
+        </div>
+
+        <div class="tool-group">
+          <button id="btnClear" class="btn-danger">Limpar Muro 🗑️</button>
+        </div>
+      </div>
+
+      <!-- Canvas / Muro -->
+      <div class="canvas-wrapper">
+        <canvas id="paintCanvas" width="800" height="500"></canvas>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
